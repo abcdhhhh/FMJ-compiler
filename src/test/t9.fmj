@@ -1,0 +1,13 @@
+class MatrixMul {
+    public static int main ( String [] id ) {
+        int[][][] a;
+        a=new int[10,5,12];
+        a[4,4,4]=2;
+        putint(a[4,4,4]);
+        putch(10);
+        return(0);
+    }
+}
+
+
+

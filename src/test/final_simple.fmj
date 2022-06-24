@@ -1,0 +1,24 @@
+class Simple {
+    public static int main ( String [] id ) {
+        int a; // r7
+	int b; // r4
+	int c; // r6
+	int N; // r4
+
+	N=getint();
+
+	starttime();
+	a=0;
+	c=0;
+	while (a<N) {
+	    b=a+1;
+	    c=c+b;
+	    a=b*2;
+	 }
+	 putint(c);
+         putch(10); // newline
+	 stoptime();
+         return(0);
+    }
+}
+

@@ -1,0 +1,18 @@
+class MatrixMul {
+    public static int main ( String [] id ) {
+        int a;
+        int[][] b;
+        int i;
+        int j;
+        int s;
+        i=0;
+        j=0;
+        b=new int[2,3];
+        s=getarray(b);
+        putarray(5,b);
+        return(0);
+    }
+}
+
+
+

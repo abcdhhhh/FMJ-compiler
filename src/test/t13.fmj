@@ -1,0 +1,31 @@
+class MatrixMul {
+    public static int main ( String [] id ) {
+        putint(3>2);
+        putch(10);
+        putint(false);
+        putch(10);
+        putint(!(2==1+1));
+        putch(10);
+        putint(1<=2);
+        putch(10);
+        putint(1&&(new tt()).Get1());
+        putch(10);
+        putint(0&&(new tt()).Get1());
+        putch(10);
+        putint(1||(new tt()).Get1());
+        putch(10);
+        putint(0||(new tt()).Get1());
+        return(0);
+    }
+}
+class tt {
+    public int Get1() {
+        putint(777);
+        putch(10);
+        return(777);
+    }
+}
+
+
+
+

@@ -1,0 +1,94 @@
+class MatrixMul {
+    public static int main ( String [] id ) {
+        SqMatr m1;
+        SqMatr m2;
+        SqMatr m3;
+        
+        m1=(new SqMatr()).GetM(2);
+        m2=(new SqMatr()).GetM(2);
+        m3=m1.MatrMul(m2);
+        
+    putint(m3.Max()); //print the max number in m3
+        putch(10); //print a return
+        return(m3.Max());
+    }
+}
+
+class SqMatr {
+    int[][] m;
+    int size; //square array
+    int x;
+
+    public SqMatr GetM(int n) {
+        m = new int [n,n];
+        size = n;
+        if (!(getarray(m) == n*n))
+           m[0,0]=16777216; //0x01000000. using a large number to signify an error :)
+        else x=0;
+        return(this);
+     }
+
+     public int[][] GetA() {
+        return(m);
+     }
+
+     public int GetSize() {
+        return(size);
+     }
+
+     public int Max() {
+        int i; int max;
+        int[] mb;
+        int x;
+
+        if (m[0,0]==16777216)  //something's wrong!
+          return(16777216);
+        else x=0;
+
+        max=-16777216; //0xff000000 negative enough!
+        i=0;
+        
+        while (i<size*size) {
+          if (max<m[0,i]) max = m[0,i]; else x=0;
+            i=i+1;
+    
+        }
+        return(max);
+     }
+     
+     public SqMatr MatrMul(SqMatr m2) {
+        int  i; int j; int k;
+        int[][] mm; int[][] m_result;
+        int r;
+        int x;
+
+        mm=m2.GetA();
+
+        if (!(size == m2.GetSize())) {
+           m[0,0]=16777216;
+           return(this);
+        }
+        else x=0;
+
+        m_result = new int [size, size];
+
+        i=0; j=0;
+        while (i<size) {
+            j=0;
+          while (j<size) {
+            r=0; k=0;
+        while (k<size) {
+          r=r+m[i,k] * mm[k,j];
+              k=k+1;
+            }
+            m_result[i,j]=r;
+            
+            j=j+1;
+          }
+          i=i+1;
+        }
+
+        m=m_result;
+        return(this);
+     }
+}

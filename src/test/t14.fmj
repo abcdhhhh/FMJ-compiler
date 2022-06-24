@@ -1,0 +1,15 @@
+class MatrixMul {
+    public static int main ( String [] id ) {
+        int a;
+        starttime();
+        a=0;
+        while(a<100*100*100){
+            a=a+1;
+        }
+        stoptime();
+        return(0);
+    }
+}
+
+
+

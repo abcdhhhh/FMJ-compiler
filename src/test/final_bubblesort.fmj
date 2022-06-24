@@ -1,0 +1,98 @@
+class BubbleSort {
+    public static int main ( String [] id ) {
+        A  a; BA ba; int x;
+        
+        a=new A();
+        if (a.ReadArr(20) == -1 ) {
+           putch(69); // 'E' 
+           putch(114); // 'r'
+           putch(114); // 'r'
+           putch(33); // '!'
+           putch(10); // newline
+           return(-1);
+        } else {x=0;}
+        
+        x=a.PrintArr();
+        
+        ba=new BA();
+        x=ba.SetArr(a);
+        x=ba.Sort();
+        x=ba.PrintArr();
+        return(0);
+    }
+}
+
+class A {
+    int[] arr;
+    int size; //size of array
+    
+    public int Size() {
+        return(size);
+    }
+    
+    public int[] Arr() {
+        return(arr);
+    }
+    
+    public int SetArr(A b) {
+        arr=b.Arr();
+	    size=b.Size();
+        return(0);
+    }
+    
+    public int ReadArr(int max_n) {
+        arr = new int[2*max_n]; //to be a bit safer...
+        size=getarray(arr);
+        if (size<=max_n)
+            return(size);
+        else
+            return(-1);
+    }
+    
+    public int PrintArr() {
+        int i;
+        i=0;
+        while (i<size) {
+            putint(arr[i]);
+            putch(32);  //space
+            i=i+1;
+        }
+        putch(10); //newline
+        return(0);
+    }
+}
+
+class BA extends A {
+     
+     public int Sweep(int s_start, int s_end) {
+        int x;
+        // putint(s_start);putch(32);putint(s_end);putch(10);
+        if (s_end < s_start ) return(-1); else x=0;
+        if (s_start == s_end) return(1); else x=0;
+
+        if (arr[s_start+1] < arr[s_start]) { //move the bigger value to the right
+            x=arr[s_start]; 
+            arr[s_start]=arr[s_start+1]; 
+            arr[s_start+1]=x;
+        }
+        else x=0;
+        // putint(s_start);putch(32);putint(s_end);putch(10);
+
+	    //keep going:
+        return(this.Sweep(s_start+1, s_end));
+    }
+
+    public int Sort() {
+        int e;
+        int x;
+
+	if (size<=1) return(1); else x=0;
+
+        e=size-1;
+        while (0<=e) {
+           x=this.Sweep(0, e);
+           e=e-1;
+        }
+	return(1);
+    }
+}

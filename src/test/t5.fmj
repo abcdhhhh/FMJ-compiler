@@ -1,0 +1,17 @@
+class MatrixMul {
+    public static int main ( String [] id ) {
+        tt a;
+        a=new tt();
+        putint(a.Get1());
+        putch(10);
+        return(0);
+    }
+}
+class tt {
+    public int Get1() {
+        return(1);
+    }
+}
+
+
+

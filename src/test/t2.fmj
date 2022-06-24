@@ -1,0 +1,10 @@
+class MatrixMul {
+    public static int main ( String [] id ) {
+        putint(1);
+        putch(10);
+        return(0);
+    }
+}
+
+
+

@@ -1,0 +1,25 @@
+class MatrixMul {
+    public static int main ( String [] id ) {
+        tt w;
+        w=(new tt()).Get1(4);
+        putint(w.Getc());
+        putch(10);
+        putint(w.Getc());
+        putch(10);
+        putint(w.Getc());
+        putch(10);
+        return(0);
+    }
+}
+class tt {
+    int c;
+    public tt Get1(int t) {
+        c=t;
+        return(this);
+    }
+    public int Getc() {
+        c=c+1;
+        return(c);
+    }
+    
+}

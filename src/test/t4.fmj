@@ -1,0 +1,22 @@
+class MatrixMul {
+    public static int main ( String [] id ) {
+        int a;
+        if(3-3){
+            putint(7+(-9));
+            putch(10);
+        }else{
+            putint(4-77);
+            putch(10);
+        }
+        a=1;
+        while(a<10){
+            a=a*2;
+            putint(a);
+            putch(10);
+        }
+        return(0);
+    }
+}
+
+
+
